@@ -69,7 +69,7 @@ considerably, in terms of underlying data structures in which the data is stored
 variations present in NoSQL databases will be further elaborated on in~\sectref{sec:categories_of_nosql_databases}.
 however the shared characteristics of databases falling under the NoSQL label will be touched upon here.
 
-\subsubsection{The CAP theorem} % (fold)
+\subsection{The CAP theorem} % (fold)
 \label{ssub:cap_theorem}
 
 In 2000, Brewer put forward the Consistency Availability Partition (CAP) theorem~\cite{brewer2000towards}, which in its most simple form
@@ -84,11 +84,11 @@ states that, in the case of NoSQL databases, a database may only have two of the
 As Brewer states, only two of the three features can be properly adhered to, given the tension between each of them, hence
 different NoSQL databases may differ in the way of which CAP theorem properties they adhere to.
 
-\subsubsection{Suitable use-cases for NoSQL}
+\subsection{Suitable use-cases for NoSQL}
 \label{ssub:suitable_usecase}
 
 Both relational and NoSQL databases are intended to coexist, both generally fitting into specific use-cases. According to
-Vicknair, et al.~\cite{vicknair2010comparison} and Kleppmann~\cite{1_kleppmann_2009}, if a use-case exhibits the following 
+Vicknair, et al.~\cite{vicknair2010comparison} and Kleppmann~\cite{1_kleppmann_2009}, if a use-case exhibits the following
 signs, a NoSQL database may be more appropriate for use than a relational database:
 
 \begin{enumerate}
@@ -102,7 +102,7 @@ signs, a NoSQL database may be more appropriate for use than a relational databa
 Of course, whether or not the use-case is suitable for non-relational database then also leads to the problem of the
 category of non-relational database which would be most suitable. These categories of NoSQL databases are touched upon
 in~\sectref{sec:categories_of_nosql_databases}.
-  
+
 % subsubsection characteristics_of_nosql_databases (end)
 
 
@@ -126,11 +126,11 @@ There are four commonly accepted distinct categories of NoSQL databases~\cite{ta
     \item Graph databases
 \end{itemize}
 
-\subsubsection{Document-oriented databases} % (fold)
+\subsection{Document-oriented databases} % (fold)
 \label{ssub:document_oriented}
 
 Document-oriented databases, or simply document databases, are arguably the most commonly used form of NoSQL
-database, with popular open-source databases, such as MongoDB~\cite{6_mongodb.org_2015} and 
+database, with popular open-source databases, such as MongoDB~\cite{6_mongodb.org_2015} and
 CouchDB~\cite{5_couchdb.apache.org_2015}, falling into this category~\cite{tauro2012comparative}.
 
 Essentially what is meant by the term ``document-oriented'' is the use of structured document types, such
@@ -142,17 +142,17 @@ with the underlying document type. Especially so for popular document types, suc
 % subsubsection document_oriented (end)
 
 
-\subsubsection{Key-value stores}
+\subsection{Key-value stores}
 \label{ssub:kvs}
 
 In key-value databases, the data is stored in single data sets made up of a unique key element and a corresponding
-value elements. Keys are unique and generally of a single data type, for example an integer, while values 
+value elements. Keys are unique and generally of a single data type, for example an integer, while values
 are accepted as being of multiple types, including key-value pairs themselves, allowing nested data
 sets~\cite{weber2010nosql}. These key-value pairs making up an individual data point in the database
 should be fairly familiar to most general computer programmers, which are often used as built-in
 data structures in common programming languages, known as hashes or associative arrays.
 
-Note that key-value store based databases can be very similar in internal data storage structure to 
+Note that key-value store based databases can be very similar in internal data storage structure to
 document-orientated databases which make use of the JSON document structure. This is because the JSON
 document structure is essentially based upon the idea of keys and values.
 
@@ -160,7 +160,7 @@ Popular examples of key-value store based databases are Cassandra~\cite{3_cassan
 and Berkeley DB~\cite{4_oracle.com_2015}.
 
 
-\subsubsection{Column-oriented databases} % (fold)
+\subsection{Column-oriented databases} % (fold)
 \label{ssub:column_oriented}
 
 Column-oriented databases stem from Google's original BigTable database~\cite{chang2008bigtable}, which
@@ -174,14 +174,14 @@ a value is only stored in a row if it is really needed, hence allowing what woul
 null value~\cite{hecht2011nosql}. This allows for convenient storage of heterogeneous datasets,
 which is a key characteristic of NoSQL databases (or the lack of strict schemas).
 
-Examples of column-oriented databases include Google's BigTable~\cite{chang2008bigtable}, and 
+Examples of column-oriented databases include Google's BigTable~\cite{chang2008bigtable}, and
 the open-source BigTable implementations, HBase and Hypertable~\cite{khetrapal2006hbase}.
 % subsubsection column_oriented (end)
 
-\subsubsection{Graph based databases} % (fold)
+\subsection{Graph based databases} % (fold)
 \label{ssub:graph_based}
 
-Graph based databases are a much more obscure structured type of database, where the underlying 
+Graph based databases are a much more obscure structured type of database, where the underlying
 data storage structure reflects a graph data structure; thus being made up of nodes and edges
 connecting those nodes. Nodes represent sets of data, while the edges represent relationships
 between the data sets~\cite{vicknair2010comparison}.
@@ -217,11 +217,11 @@ and the thousands of organisations using MongoDB in production~\cite{mongo_custo
 
 Some examples of NoSQL databases that will be briefly looked at include MongoDB, Neo4j, and BigTable.
 
-\subsubsection{MongoDB} % (fold)
+\subsection{MongoDB} % (fold)
 \label{ssub:mongodb}
 
 MongoDB is a document-oriented NoSQL database, that is currently gaining fast user adoption. MongoDB,
-first developed in 2007 at 10gen, now MongoDB Inc., is open-sourced under the GNU Affero General Public License v3.0, 
+first developed in 2007 at 10gen, now MongoDB Inc., is open-sourced under the GNU Affero General Public License v3.0,
 currently at version 3.0.1~\cite{6_mongodb.org_2015} MongoDB uses a document structure based upon
 JSON which makes use of binary form for data storage, called BSON, or Binary JSON~\cite{1_mongo_docs_2015}.
 
@@ -231,14 +231,14 @@ interface for interactions. MongoDB uses write-ahead journaling for its durabili
 % subsubsection mongodb (end)
 
 
-\subsubsection{Neo4j} % (fold)
+\subsection{Neo4j} % (fold)
 \label{ssub:neo4j}
 
 Neo4j is a graph based NoSQL database, developed at Neo Technology, Inc., dual licenced under both the open-source
 GNU Affero General Public License v3.0 licence and a commercial licence. Neo4j is currently at version 2.2.0~\cite{2_neo4j}.
-In Neo4j, all data is stored either as an edge or a node, or an attribute on either an edge or a node~\cite{1_neo4j}. 
+In Neo4j, all data is stored either as an edge or a node, or an attribute on either an edge or a node~\cite{1_neo4j}.
 
-Neo4j provides a console interface, Java programming API, along with a REST API with search indices to allow users and programs to interface and 
+Neo4j provides a console interface, Java programming API, along with a REST API with search indices to allow users and programs to interface and
 interact with the database~\cite{redmond2012seven}. Neo4j can be considered to have ACID durability, something that
 most NoSQL databases reject~\cite{redmond2012seven}.
 
@@ -247,7 +247,7 @@ most NoSQL databases reject~\cite{redmond2012seven}.
 % subsubsection couchdb (end)
 
 
-\subsubsection{BigTable} % (fold)
+\subsection{BigTable} % (fold)
 \label{ssub:bigtable}
 
 BigTable is a column-oriented database, developed at Google, Inc., in 2004, in use at Google as an inhouse product.
@@ -273,7 +273,7 @@ particularly suitable for.
 In summary, NoSQL databases, while the concept has been around for a number of decades, with recent developments
 in database technology have presented themselves as a viable option for certain use-cases where relational
 database solutions are not entirely appropriate. With fast gaining adoption in industry, and further research
-into NoSQL technology, NoSQL databases are expected to gain further traction and gain even more market 
+into NoSQL technology, NoSQL databases are expected to gain further traction and gain even more market
 share in the previously relational dominated field of consumer databases.
 
 The differences between what makes NoSQL databases and relational databases has been discussed,
